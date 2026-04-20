@@ -1,5 +1,5 @@
 import static org.junit.Assert.*;
-import java.util.ArrayList;
+
 import java.util.*;
 
 import org.junit.jupiter.api.Test;
@@ -88,6 +88,24 @@ public class PracticeTest {
         assertEquals(2, actual);
         
 
+
+    }
+
+    @Test 
+    void testsSecondLargestKey() {
+        //Arrange 
+        HashMap<Integer, String> numbers = new HashMap<Integer, String>();
+        //Act
+        numbers.put(1, "a");
+        numbers.put(2, "b");
+        numbers.put(5, "c");
+        numbers.put(8, "b");
+        numbers.put(9, "e");
+        numbers.put(11, "f");
+
+        int actual = Practice.secondLargestKey(numbers);
+        //Assert
+        assertEquals(9, actual);
 
     }
     
