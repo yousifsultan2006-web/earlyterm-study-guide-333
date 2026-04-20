@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -45,4 +46,41 @@ public class Practice {
         return longestWord;
 
     }
+
+    public static int wordsLongerThanNAndShorterthanM(HashSet<String> words, int n, int m) {
+        int wordCount = 0;
+        for (String word : words) {
+            if (word.length() > n && word.length() < m) {
+                wordCount++;
+            }
+
+        }
+
+        return wordCount;
+    }
+
+    public static int differenceBetweenEvenAndOdd(HashMap<String, Integer> numbers) {
+        int oddValues = 0;
+        int difference;
+        int evenValues = 0;
+        for (int number : numbers.values()) {
+
+            if (number % 2 != 0) {
+                oddValues++;
+            } else {
+                evenValues++;
+
+            }
+        }
+        difference = oddValues - evenValues;
+        
+        return difference;
+    }
+
+    public static int secondLargestKey(HashMap<Integer, String> map) {
+        
+        return 0;
+    }
+
+
 }
